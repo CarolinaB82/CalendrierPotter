@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/css/style.css"> <!-- Assurez-vous d'inclure votre fichier de styles -->
+    <link rel="website icon" href="./asset/images/home-icon.png">
+    <title>Calendrier de l'avent</title>
+    <script src="./asset/js/calendrier.js"></script>
+</head>
+
+<body>
+    <div class="dispersion">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:150px;left:30px;width:50px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:60px;left:60px;width:70px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:10px;left:300px;width:50px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:160px;left:500px;width:50px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:100px;right:20px;width:40px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:10px;right:40px;width:50px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:150px;left:30px;width:90px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:60px;left:60px;width:30px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:130px;left:300px;width:50px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:60px;left:380px;width:70px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:15px;right:490px;width:90px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:150px;right:100px;width:40px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:150px;left:30px;width:50px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:160px;left:130px;width:50px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:180px;left:270px;width:60px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:50px;left:90px;width:50px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:200px;right:50px;width:50px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:130px;right:170px;width:50px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:20px;left:8700px;width:50px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:60px;left:630px;width:30px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:10px;left:750px;width:50px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:60px;left:500px;width:60px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:30px;right:350px;width:50px;">
+        <img src="/asset/images/images.png" alt="" class="candle" style="top:10px;right:270px;width:90px;">
+</div>
+</div>
+    <div class="overlay">
+        <h1 class="title1">Bienvenue a LDNR</h1>
+        <h2 class="title2">Cliquez pour accéder au Grand Hall</h2>
+        <div class="torche">
+            <img src="./asset/images/fire-87.gif" alt="Torche" width="200" height="300">
+            <img src="./asset/images/fire-87.gif" alt="Torche" width="200" height="300">
+        </div>
+    </div>
+
+    <audio id="myAudio" controls hidden>
+        <source src="./asset/son/the-magic-tree-150606.mp3" type="audio/mp3">
+        Votre navigateur ne prend pas en charge l'élément audio.
+    </audio>
+
+
+    <script>
+        var audio = document.getElementById('myAudio');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+    <div class="calendar">
+        <button onclick="toggleAudio()">Play/Pause</button>
+        <div class="title">
+            <h1>Calendrier de l'avent</h1>
+        </div>
+
+        <div class="day day-special1"
+            onclick="afficherLien('https://www.linkedin.com/in/mohamad-almustafa-3502a469/',this)">
+            <div class="text-container">1</div>
+        </div>
+        <!--this : recupere toute la balise-->
+
+
+        <div class="day day-special2"
+            onclick="afficherLien('https://www.linkedin.com/in/caroline-berg%C3%A9-396646109/',this)">
+            <div class="text-container">2</div>
+        </div>
+        <div class="day day-special3" onclick="afficherLien('https://www.linkedin.com/in/elisa-bothy-a457b1225/',this)">
+            <div class="text-container">3</div>
+        </div>
+        <div class="day day-special4" onclick="afficherPdf('./asset/images/jonathan dah.pdf', this)">
+            <div class="text-container">4</div>
+        </div>
+        <div class="day day-special5" onclick="afficherLien('https://www.linkedin.com/in/wiame-elalami/',this)">
+            <div class="text-container">5</div>
+        </div>
+        <div class="day day-special6"
+            onclick="afficherLien('https://www.linkedin.com/in/tha%C3%AFs-genin-291647271/',this)">
+            <div class="text-container">6</div>
+        </div>
+        <div class="day day-special7"
+            onclick="afficherLien('https://www.linkedin.com/in/k%C3%A9vin-hoppenot-47066b149/',this)">
+            <div class="text-container">7</div>
+        </div>
+        <div class="day day-special8" onclick="afficherLien('https://www.linkedin.com/in/ralph-lee-a8b536213/',this)">
+            <div class="text-container">8</div>
+        </div>
+        <div class="day day-special9" onclick="afficherLien('https://www.linkedin.com/in/igor-martellote/',this)">
+            <div class="text-container">9</div>
+        </div>
+        <div class="day day-special10"
+            onclick="afficherLien('https://www.linkedin.com/in/federico-manca-48a9981b9/',this)">
+            <div class="text-container">10</div>
+        </div>
+        <div class="day day-special11"
+            onclick="afficherLien('https://www.linkedin.com/in/joan-paupardin-a448022a0/',this)">
+            <div class="text-container">11</div>
+        </div>
+        <div class="day day-special12"
+            onclick="afficherLien('https://www.linkedin.com/in/klervia-picaud-9508022a0/',this)">
+            <div class="text-container">12</div>
+        </div>
+        <div class="day day-special13"
+            onclick="afficherLien('https://www.linkedin.com/in/juliette-rat-b36b42216/',this)">
+            <div class="text-container">13</div>
+        </div>
+        <div class="day day-special14"
+            onclick="afficherLien('https://www.linkedin.com/in/guillaume-rostagnat-299002200/',this)">
+            <div class="text-container">14</div>
+        </div>
+        <div class="day day-special15"
+            onclick="afficherLien('https://www.linkedin.com/in/valentina-sarais-85a2ab90/',this)">
+            <div class="text-container">15</div>
+        </div>
+        <div class="day day-special16" onclick="afficherLien('https://www.linkedin.com/in/anastasiia-shlapak/',this)">
+            <div class="text-container">16</div>
+        </div>
+        <div class="day day-special17"
+            onclick="afficherLien('https://www.linkedin.com/in/am%C3%A9lie-solanas-pruvost-49a589242/',this)">
+            <div class="text-container">17</div>
+        </div>
+
+        <!-- Ajoutez d'autres jours au besoin -->
+    </div>
+
+    <script>
+        function afficherLien(url, dayElement) {
+            dayElement.classList.add('shaking');  // balise div, faire bouger le chapeau
+            var timeoutValue = 500;               // si pas la 1ere fois moins d'1 scd
+            if (!dayElement.classList.contains('imageClic')) {
+                dayElement.classList.add('smoking'); // faire de la fumée
+                timeoutValue = 2000;                  // 1ere fois 2 scd
+            }
+
+            // Simule l'ouverture du lien après une courte durée
+            setTimeout(function () {
+                dayElement.classList.remove('shaking');
+                dayElement.classList.remove('smoking');
+                dayElement.classList.add('imageClic');
+                var largeurFenetre = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                var hauteurFenetre = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+                // Calculer la largeur et la hauteur de la popup
+                var largeurPopup = Math.floor(largeurFenetre * 0.8);
+                var hauteurPopup = Math.floor(hauteurFenetre * 0.8);
+
+                // Calculer la position pour centrer la popup
+                var leftPosition = Math.floor((largeurFenetre - largeurPopup) / 2);
+                var topPosition = Math.floor((hauteurFenetre - hauteurPopup) / 2);
+
+
+                window.open(url, 'Page Linkedin', 'width=' + largeurPopup + ',height=' + hauteurPopup + ',left=' + leftPosition + ',top=' + topPosition);
+            }, timeoutValue);
+
+
+        }
+        function afficherPdf(url, dayElement) {
+            dayElement.classList.add('shaking');  // balise div, faire bouger le chapeau
+            var timeoutValue = 500;               // si pas la 1ere fois moins d'1 scd
+            if (!dayElement.classList.contains('imageClic')) {
+                dayElement.classList.add('smoking'); // faire de la fumée
+                timeoutValue = 2000;                  // 1ere fois 2 scd
+            }
+
+            // Simule l'ouverture du lien après une courte durée
+            setTimeout(function () {
+                dayElement.classList.remove('shaking');
+                dayElement.classList.remove('smoking');
+                dayElement.classList.add('imageClic');
+                // Obtenir la largeur et la hauteur de la fenêtre principale
+                var largeurFenetre = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                var hauteurFenetre = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+                // Calculer la largeur et la hauteur de la popup
+                var largeurPopup = Math.floor(largeurFenetre * 0.8);
+                var hauteurPopup = Math.floor(hauteurFenetre * 0.8);
+
+                // Calculer la position pour centrer la popup
+                var leftPosition = Math.floor((largeurFenetre - largeurPopup) / 2);
+                var topPosition = Math.floor((hauteurFenetre - hauteurPopup) / 2);
+                // Ouvrir une fenêtre modale avec l'image
+                var urlPDF = url;
+                var popup = window.open('', 'NomDeLaPopup', 'width=' + largeurPopup + ',height=' + hauteurPopup + ',left=' + leftPosition + ',top=' + topPosition);
+                popup.document.write('<embed width="100%" height="100%" src="' + urlPDF + '" type="application/pdf">');
+                popup.document.close();
+            }, timeoutValue);
+        }
+
+    </script>
+</body>
+
+</html>

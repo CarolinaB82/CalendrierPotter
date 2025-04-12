@@ -1,0 +1,431 @@
+:root {
+  --X: 40vh;
+  --Y: 45vh;
+  cursor: url("../images/oth247.cur"), auto;
+
+}
+
+body {
+  font-family: 'Harry_potter', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/GrandeSalle.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Centre l'image de fond */
+  /* height: 100vh;  */
+
+}
+
+.calendar {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+@font-face {
+  font-family: 'Harry_potter';
+  src: url('../fonts/harry_p/webfontkit-20240104-091019/harryp__-webfont.woff2') format('woff2'),
+    url('../fonts/harry_p/webfontkit-20240104-091019/harryp__-webfont.woff') format('woff');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+.title {
+  font-family: 'Harry_potter';
+  color: rgb(240, 221, 55);
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 2);
+  text-align: center;
+  font-size: 45px;
+}
+
+h1 {
+  margin: 0;
+}
+
+button {
+
+  font-family: 'Harry_potter';
+  color: rgb(15, 12, 12);
+  text-align: center;
+  font-size: 45px;
+  width: 100px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #eba40b;
+  margin-left: 10%;
+}
+
+.text-container {
+  position: absolute;
+  /* Ajout de la propriété position absolute */
+  bottom: 10px;
+  /* Ajustez cette valeur selon votre besoin */
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Harry_potter';
+  color: goldenrod;
+}
+
+.day::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: -10%;
+  background: url("../images/fumee2.png");
+  /* Image de fumée */
+  background-size: cover;
+  border-radius: 5px;
+  opacity: 0;
+  z-index: -1;
+  left: 20%;
+}
+
+@keyframes smokeAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(2);
+  }
+}
+
+.day.smoking::before {
+  animation: smokeAnimation 2s linear;
+}
+
+.day.shaking {
+  animation: shakeAnimation 0.5s ease-in-out;
+}
+
+@keyframes shakeAnimation {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.imageClic {
+  filter: hue-rotate(180deg);
+  /* Changer la couleur de l'image (180 degrés pour une rotation complète) */
+}
+
+.day {
+  width: 150px;
+  height: 130px;
+
+  display: flex;
+
+  /*cursor: pointer;*/
+  transition: background-color 0.3s ease;
+
+
+  background-image: url("../images/chapeauPotter4.png");
+  /* Remplacez par le chemin de votre image */
+  background-position: center;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+.day-special1 {
+  position: absolute;
+  top: 35%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 45%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+}
+
+.day-special2 {
+  position: absolute;
+  top: 80%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 45%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+}
+
+.day-special3 {
+  position: absolute;
+  top: 25%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 5%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+}
+
+.day-special4 {
+  position: absolute;
+  top: 60%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 58%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+}
+
+.day-special5 {
+  position: absolute;
+  top: 25%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 32%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+
+}
+
+.day-special6 {
+  position: absolute;
+  top: 35%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 70%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+
+}
+
+.day-special7 {
+  position: absolute;
+  top: 2%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 1%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+
+}
+
+.day-special8 {
+  position: absolute;
+  top: 60%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 32%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+
+}
+
+.day-special9 {
+  position: absolute;
+  top: 80%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 75%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+
+}
+
+.day-special10 {
+  position: absolute;
+  top: 35%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 20%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+
+}
+
+.day-special11 {
+  position: absolute;
+  top: 60%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 85%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+
+}
+
+.day-special12 {
+  position: absolute;
+  top: 60%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 45%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+
+}
+
+.day-special13 {
+  position: absolute;
+  top: 25%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 58%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+
+}
+
+.day-special14 {
+  position: absolute;
+  top: 80%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 17%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+
+}
+
+.day-special15 {
+  position: absolute;
+  top: 60%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 5%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+
+}
+
+.day-special16 {
+  position: absolute;
+  top: 25%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 85%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+
+}
+
+.day-special17 {
+  position: absolute;
+  top: 2%;
+  /* Ajustez la valeur selon la position verticale souhaitée */
+  left: 88%;
+  /* Ajustez la valeur selon la position horizontale souhaitée */
+}
+
+@font-face {
+    font-family: Curly;
+    src: url("../fonts/harry_p/ChopinScript.ttf");
+}
+
+.title1 {
+  font-family: 'Harry_potter';
+  color: rgb(240, 221, 55);
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 2);
+  text-align: center;
+  font-size: 70px;
+  margin-top: 30px;
+}
+
+
+.title2{
+    display: flex;
+    
+    justify-content: center;
+    font-family: "Curly";
+    
+    color:gold;
+    text-shadow: 5px 5px 0px black ; 
+    font-size : 50px;
+
+    margin-top: 30px;
+    
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-image: url("../images/PorteFermeeCropped.jpeg");
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .torche{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-image: url("../images/PorteFermeeCropped.jpeg");
+    background-color: rgba(0,0,0,0.5);
+        /* visibility: visible;
+        opacity: 0;
+        transition: visibility 0s 2s, opacity 2s linear; */
+
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility 0s 2s, opacity 2s linear;
+  
+  }
+
+.effacer {
+    display :none;
+}
+
+.bougies{
+  position: fixed;
+  height : 30vh;
+}
+
+#menu{
+  width: 700px;
+  overflow: hidden;
+  height: 400px;
+}
+
+
+.candle {
+  width: 10%;
+  border-radius: 10px;
+  transform: translatey(0px);
+animation: float 6s ease-in-out infinite;
+  z-index: -99;
+}
+
+@keyframes float {
+0% {
+  transform: translatey(0px);
+}
+50% {
+  transform: translatey(-20px);
+}
+100% {
+  transform: translatey(0px);
+}
+}
+
+
+.dispersion img{
+  position: absolute;
+}
+
+.images{
+  margin: 0 10px;
+  text-align: center;
+}
+
+.images:nth-child(1) {
+  top: 10px;
+  left: 20px;
+}
+
+.images:nth-child(2) {
+  top: 50%;
+  left: 50%;
+}
+
+.images:nth-child(3) {
+  bottom: 30px;
+  right: 50px;
+}
+
